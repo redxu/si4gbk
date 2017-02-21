@@ -51,23 +51,12 @@ void GetFilenameFromPath(const char* path,char* filename)
 	strcpy(filename,path);
 }
 
-/*
-void GetTmpFilename(const char* orgfile,char* newfile)
-{
-	char tmppath[256];
-	char filename[256];
-	GetFilenameFromPath(orgfile,filename);
-	GetTempPath(sizeof(tmppath),tmppath);
-	sprintf(newfile,"%s\\%s.gbk",tmppath,filename);
-}
-*/
-
 //获取临时文件名
 void GetTmpFilename(unsigned long hash,char* newfile)
 {
 	char tmppath[256];
 	GetTempPath(sizeof(tmppath),tmppath);
-	sprintf(newfile,"%s\\%lu.gbk",tmppath,hash);	
+	sprintf(newfile,"%s\\%lu.u8",tmppath,hash);	
 }
 
 char* ltrim(char* str)

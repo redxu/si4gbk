@@ -1,6 +1,7 @@
 #ifndef __SIFILEMGR__H__
 #define __SIFILEMGR__H__
 
+#include <windows.h>
 
 //文件结构
 typedef struct SiFileInfo
@@ -8,6 +9,7 @@ typedef struct SiFileInfo
 	unsigned long hash;
 	int u8flag;
 	unsigned char orgmd5[16];
+	WIN32_FILE_ATTRIBUTE_DATA wfad;
 	char orgfile[256];
 	char gbkfile[256];
 };
