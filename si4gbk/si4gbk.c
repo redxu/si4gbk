@@ -5,7 +5,7 @@
 static void HookSI4(void)
 {
     HackSI4();
-    HookWinApi();
+    //HookWinApi();
 }
 
 static void UnhookSI4(void)

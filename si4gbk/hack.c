@@ -7,7 +7,7 @@ typedef BOOL (WINAPI* CryptVerifySignatureWFn)(
 	BYTE       *pbSignature,
 	DWORD      dwSigLen,
 	HCRYPTKEY  hPubKey,
-	LPCTSTR    sDescription,
+	LPCWSTR    sDescription,
 	DWORD      dwFlags
 );
 
@@ -18,7 +18,7 @@ BOOL WINAPI HookCryptVerifySignatureW(
 	BYTE       *pbSignature,
 	DWORD      dwSigLen,
 	HCRYPTKEY  hPubKey,
-	LPCTSTR    sDescription,
+	LPCWSTR    sDescription,
 	DWORD      dwFlags
 )
 {
